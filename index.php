@@ -1,4 +1,5 @@
 <?php
+include_once 'painel/helper/funcoes.php';
 
 $pg = isset( $_GET['pg']);
 
@@ -8,11 +9,25 @@ if ($pg) {
             include_once 'painel/paginas/acesso/login.php';
 
             break;
-        case 'dashboard': //pagina inicial do painel administrativo
             include_once 'painel/paginas/dashboard.php';
 
             break;
+        
+        case 'inicial':
+            include_once 'painel/site/inicio.php';
 
+            break;
+            include_once 'painel/paginas/dashboard.php';
+
+            break;
+        
+        case 'dashboard':
+            if (verificarlogin())
+                
+            include_once 'painel/paginas/dashboard.php';
+
+            break;
+        
         default:
             include_once 'painel/paginas/dashboard.php';
             break;

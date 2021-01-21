@@ -1,1 +1,1 @@
-<div class="cointaner">area de trabalho</div>
+<a href="?pg=login"><div class="cointaner">Area de Trabalho do Painel Administrativo</div></a>

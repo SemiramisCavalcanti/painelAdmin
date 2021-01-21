@@ -24,9 +24,9 @@
                     <p class="login-box-msg">
                         Faça login para iniciar sua sessão</p>
 
-                    <form action="../../index3.html" method="post">
+                    <form action="?pg=dashboard" method="post">
                         <div class="input-group mb-3">
-                            <input type="email" class="form-control" placeholder="Email">
+                            <input name="usuario" type="text" class="form-control" placeholder="Usuário">
                             <div class="input-group-append">
                                 <div class="input-group-text">
                                     <span class="fas fa-envelope"></span>
@@ -34,7 +34,7 @@
                             </div>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="password" class="form-control" placeholder="Password">
+                            <input name="senha" type="password" class="form-control" placeholder="Password">
                             <div class="input-group-append">
                                 <div class="input-group-text">
                                     <span class="fas fa-lock"></span>
@@ -63,11 +63,11 @@
                     <div class="social-auth-links text-center mt-2 mb-3">
                         <a href="#" class="btn btn-block btn-primary">
                             <i class="fab fa-facebook mr-2"></i> 
-                            Entrar usando Facebook
+                            Entrar 
                         </a>
-                        <a href="#" class="btn btn-block btn-danger">
+                        <a href="?pg=inicial" class="btn btn-block btn-danger">
                             <i class="fab fa-google-plus mr-2"></i> 
-                            Entrar usando Google+
+                            Voltar ao site
                         </a>
                     </div>
                     <!-- /.social-auth-links -->
