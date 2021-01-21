@@ -22,10 +22,10 @@ if ($pg) {
             break;
         
         case 'dashboard':
-            if (verificarlogin())
+            if (verificarlogin()){
                 
             include_once 'painel/paginas/dashboard.php';
-
+            }
             break;
         
         default:

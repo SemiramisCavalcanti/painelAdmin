@@ -54,7 +54,7 @@
                             <!-- /.col -->
                             <div class="col-4">
                                 <button type="submit" class="btn btn-primary btn-block">
-                                    Assinar em</button>
+                                   Entrar</button>
                             </div>
                             <!-- /.col -->
                         </div>
@@ -63,7 +63,7 @@
                     <div class="social-auth-links text-center mt-2 mb-3">
                         <a href="#" class="btn btn-block btn-primary">
                             <i class="fab fa-facebook mr-2"></i> 
-                            Entrar 
+                            Entrar pelo Facebook
                         </a>
                         <a href="?pg=inicial" class="btn btn-block btn-danger">
                             <i class="fab fa-google-plus mr-2"></i> 
