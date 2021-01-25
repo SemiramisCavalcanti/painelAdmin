@@ -42,33 +42,24 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-8">
-                                <div class="icheck-primary">
-                                    <input type="checkbox" id="remember">
-                                    <label for="remember">
 
-                                        Lembre de mim
-                                    </label>
-                                </div>
-                            </div>
-                            <!-- /.col -->
-                            <div class="col-4">
-                                <button type="submit" class="btn btn-primary btn-block">
-                                   Entrar</button>
-                            </div>
-                            <!-- /.col -->
+                            <div class="icheck-primary">
+                                <input type="checkbox" id="remember">
+                                <label for="remember">
+
+                                    Lembre de mim
+                                </label>
+                            </div>                                              
+                            <button type="submit" class="btn btn-primary btn-block mt-2">
+                                Entrar</button>   
                         </div>
                     </form>
 
-                    <div class="social-auth-links text-center mt-2 mb-3">
-                        <a href="#" class="btn btn-block btn-primary">
-                            <i class="fab fa-facebook mr-2"></i> 
-                            Entrar pelo Facebook
-                        </a>
-                        <a href="?pg=inicial" class="btn btn-block btn-danger">
-                            <i class="fab fa-google-plus mr-2"></i> 
-                            Voltar ao site
-                        </a>
+
+                    <div class="row social-auth-links text-center mt-2 mb-3">
+                            <a href="?pg=inicial" class="btn btn-block btn-danger">
+                                Voltar ao site
+                            </a>
                     </div>
                     <!-- /.social-auth-links -->
 
