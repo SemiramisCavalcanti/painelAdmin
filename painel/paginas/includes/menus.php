@@ -107,43 +107,43 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="pages/layout/top-nav.html" class="nav-link">
+                                    <a href="#" class="nav-link">
                                         <i class="fas fa-cocktail nav-icon"></i>
                                         <p>Comercial</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                                    <a href="#" class="nav-link">
                                         <i class="fas fa-cogs nav-icon"></i>
                                         <p>Recursos Humanos</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/layout/boxed.html" class="nav-link">
+                                    <a href="#" class="nav-link">
                                         <i class="fas fa-cart-plus nav-icon"></i>
                                         <p>Compras e Estoque</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/layout/fixed-sidebar.html" class="nav-link">
+                                    <a href="#" class="nav-link">
                                         <i class="fas fa-bus nav-icon"></i>
                                         <p>Operações</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/layout/fixed-sidebar-custom.html" class="nav-link">
+                                    <a href="#" class="nav-link">
                                         <i class="far fa-edit nav-icon"></i>
                                         <p>Marketing <small>e Propaganda</small></p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/layout/fixed-topnav.html" class="nav-link">
+                                    <a href="#" class="nav-link">
                                         <i class="fas fa-charging-station nav-icon"></i>
                                         <p>Financeiro</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/layout/fixed-footer.html" class="nav-link">
+                                    <a href="#" class="nav-link">
                                         <i class="fas fa-chess-queen nav-icon"></i>
                                         <p>Diretoria</p>
                                     </a>
@@ -155,7 +155,7 @@
                         <!--fim drop-->
   
                         <li class="nav-item">
-                            <a href="?pg=produtos" class="nav-link">
+                            <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-calendar-alt"></i>
                                 <p>
                                     Planejamento                                
@@ -163,7 +163,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="?pg=produtos" class="nav-link">
+                            <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-bullhorn"></i>
                                 <p>
                                     Mídia                                
@@ -171,7 +171,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="?pg=produtos" class="nav-link">
+                            <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-chart-line"></i>
                                 <p>
                                     Indices                                
@@ -180,7 +180,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="?pg=produtos" class="nav-link">
+                            <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-cash-register"></i>
                                 <p>
                                     Faturamento                               
@@ -188,7 +188,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="?pg=produtos" class="nav-link">
+                            <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-tools"></i>
                                 <p>
                                     Configurações                               
