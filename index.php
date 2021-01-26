@@ -22,6 +22,14 @@ if ($pg) {
             include_once 'painel/paginas/produtos.php';
             break;
         
+        case 'servicos':
+            include_once 'painel/paginas/servicos.php';
+            break;
+        
+        case 'contato':
+            include_once 'painel/paginas/contato.php';
+            break;
+        
         case 'dashboard':
             include_once 'painel/paginas/dashboard.php';
             break;
