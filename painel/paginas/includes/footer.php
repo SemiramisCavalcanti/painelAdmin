@@ -74,12 +74,13 @@
     $('#example2').DataTable({
       "paging": true,
       "lengthChange": false,
-      "searching": false,
-      "ordering": true,
+      "searching": true, 
       "info": true,
       "autoWidth": false,
       "responsive": true,
-    });
+    }).buttons ()
+            .container ()
+            .appendto ('#example_wrapper .col-md-6:eq(0)')
   });
 </script>
 </body>
