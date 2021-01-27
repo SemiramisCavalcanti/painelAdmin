@@ -9,7 +9,8 @@ class conexao {
     private $db_password = '';
     
     public function selecionardados($consulta,$parametros = null, $debug = true, $closse_connection = true ) {
-    $result = NULL
+    $result = NULL;
+            
     $connection = new PDO ();
     }
     
