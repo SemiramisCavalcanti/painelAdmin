@@ -39,14 +39,28 @@
                                 <table id="tabela-produtos" class="table table-bordered table-striped table-hover">
                                     <thead>
                                         <tr>
+                                            <th>Cod</th>
                                             <th>Produto</th>
                                             <th>Tipo</th>
                                             <th>Valor</th>
-                                            <th>Estoque</th>
                                             <th></th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <!--testando-->
+                                        <tr>
+                                            <td>
+                                                <form action="bd/conexao.php">
+                                                    <select name=" " id=""></select>
+                                                    
+                                                    
+                                                    
+                                                    
+                                                </form>
+                                            </td>
+                                        </tr>
+                                        
+                                        
                                         <?php
                                         foreach ($dados as $dado) {
                                             ?>
@@ -57,7 +71,7 @@
                                                 <td><?php echo $dado ['valor'];?></td>
                                                 <td>
                                                     <!--vizualiza-->
-                                                    <a href="#" class="btn btn-success">
+                                                    <a href="?pg=Itens&id=<?php echo?>" class="btn btn-success">
                                                         <span class="fa fa-eye"></span>
                                                     </a>
                                                     <!--editar-->
@@ -79,10 +93,10 @@
                                     </tbody>
                                     <tfoot>
                                         <tr>
+                                            <th>Cod</th>
                                             <th>Produto</th>
                                             <th>Tipo</th>
                                             <th>Valor</th>
-                                            <th>Estoque</th>
                                             <th></th>
                                         </tr>
                                     </tfoot>

@@ -24,11 +24,22 @@ if ($pg) {
             include_once 'painel/paginas/produtos.php';
             break;
         
+        case 'Itens':
+            $id = $_GET ['id'];
+            $resultDados = new conexao;
+            $dados = $resultDados->selecionaDados('SELECT *  FROM produtos WERE id = '.$id);
+            include_once 'painel/paginas/produtosItem.php';
+            break;
+        
         case 'servicos':
+            $resultDados = new conexao;
+            $dados = $resultDados->selecionaDados('SELECT *  FROM servicos');
             include_once 'painel/paginas/servicos.php';
             break;
         
         case 'contato':
+            $resultDados = new conexao;
+            $dados = $resultDados->selecionaDados('SELECT *  FROM contato');
             include_once 'painel/paginas/contato.php';
             break;
         
