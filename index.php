@@ -20,7 +20,7 @@ if ($pg) {
 
         case 'produtos':
             $resultDados = new conexao;
-            $resultDados = s
+            $dados = $resultDados->selecionaDados('SELECT *  FROM produtos');
             include_once 'painel/paginas/produtos.php';
             break;
         

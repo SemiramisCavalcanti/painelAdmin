@@ -48,13 +48,13 @@
                                     </thead>
                                     <tbody>
                                         <?php
-                                        foreach ($array as $value) {
+                                        foreach ($dados as $dado) {
                                             ?>
                                             <tr>
-                                                <td><?php echo $dados ['id'];?></td>
-                                                <td><?php echo $dados ['nome'];?></td>
-                                                <td><?php echo $dados ['tipo'];?></td>
-                                                <td><?php echo $dados ['valor'];?></td>
+                                                <td><?php echo $dado ['id'];?></td>
+                                                <td><?php echo $dado ['nome'];?></td>
+                                                <td><?php echo $dado ['tipo'];?></td>
+                                                <td><?php echo $dado ['valor'];?></td>
                                                 <td>
                                                     <!--vizualiza-->
                                                     <a href="#" class="btn btn-success">
