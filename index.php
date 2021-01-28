@@ -19,6 +19,8 @@ if ($pg) {
            break;
 
         case 'produtos':
+            $resultDados = new conexao;
+            $resultDados = s
             include_once 'painel/paginas/produtos.php';
             break;
         

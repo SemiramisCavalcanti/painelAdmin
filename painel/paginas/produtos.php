@@ -42,104 +42,48 @@
                                             <th>Produto</th>
                                             <th>Tipo</th>
                                             <th>Valor</th>
-                                            <th>Ações</th>
-                                            <th>CSS grade</th>
+                                            <th>Estoque</th>
+                                            <th></th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>Trident</td>
-                                            <td>Internet
-                                                Explorer 4.0
-                                            </td>
-                                            <td>Win 95+</td>
-                                            <td> 4</td>
-                                            <td>X</td>
+                                        <?php
+                                        foreach ($array as $value) {
+                                            ?>
+                                            <tr>
+                                                <td><?php echo $dados ['id'];?></td>
+                                                <td><?php echo $dados ['nome'];?></td>
+                                                <td><?php echo $dados ['tipo'];?></td>
+                                                <td><?php echo $dados ['valor'];?></td>
+                                                <td>
+                                                    <!--vizualiza-->
+                                                    <a href="#" class="btn btn-success">
+                                                        <span class="fa fa-eye"></span>
+                                                    </a>
+                                                    <!--editar-->
+                                                    <a href="#" class="btn btn-primary">
+                                                        <span class="fa fa-edit"></span>
+                                                    </a>
+                                                    <!--apagar-->
+                                                    <a href="#" class="btn btn-secondary">
+                                                        <span class="fa fa-trash"></span>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <?php
+                                        }
+                                        ?>
 
-                                            <!--vizualiza-->
-                                    <a href="#" class="btn btn-outline-success">
-                                        <span class="fa fa-eye"></span>
-                                    </a>
-                                    <!--editar-->
-                                    <<a href="#" class="btn btn-outline-success">
-                                        <span class="fa fa-edit"></span>
-                                    </a>
-                                    <!--apagar-->
-                                    <<a href="#" class="btn btn-outline-success">
-                                        <span class="fa fa-trash"></span>
-                                    </a>
 
-                                    <tr>
-                                        <td>Tasman</td>
-                                        <td>Internet Explorer 5.2</td>
-                                        <td>Mac OS 8-X</td>
-                                        <td>1</td>
-                                        <td>C</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Misc</td>
-                                        <td>NetFront 3.1</td>
-                                        <td>Embedded devices</td>
-                                        <td>-</td>
-                                        <td>C</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Misc</td>
-                                        <td>NetFront 3.4</td>
-                                        <td>Embedded devices</td>
-                                        <td>-</td>
-                                        <td>A</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Misc</td>
-                                        <td>Dillo 0.8</td>
-                                        <td>Embedded devices</td>
-                                        <td>-</td>
-                                        <td>X</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Misc</td>
-                                        <td>Links</td>
-                                        <td>Text only</td>
-                                        <td>-</td>
-                                        <td>X</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Misc</td>
-                                        <td>Lynx</td>
-                                        <td>Text only</td>
-                                        <td>-</td>
-                                        <td>X</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Misc</td>
-                                        <td>IE Mobile</td>
-                                        <td>Windows Mobile 6</td>
-                                        <td>-</td>
-                                        <td>C</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Misc</td>
-                                        <td>PSP browser</td>
-                                        <td>PSP</td>
-                                        <td>-</td>
-                                        <td>C</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Other browsers</td>
-                                        <td>All others</td>
-                                        <td>-</td>
-                                        <td>-</td>
-                                        <td>U</td>
-                                    </tr>
+
                                     </tbody>
                                     <tfoot>
                                         <tr>
-                                            <th>Ordenar lista</th>
-                                            <th>Navegador</th>
-                                            <th>Plataformas</th>
-                                            <th>Versão</th>
-                                            <th>CSS grade</th>
+                                            <th>Produto</th>
+                                            <th>Tipo</th>
+                                            <th>Valor</th>
+                                            <th>Estoque</th>
+                                            <th></th>
                                         </tr>
                                     </tfoot>
                                 </table>
