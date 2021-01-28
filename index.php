@@ -24,10 +24,11 @@ if ($pg) {
             include_once 'painel/paginas/produtos.php';
             break;
         
-        case 'Itens':
+        case 'itens':
             $id = $_GET ['id'];
+            
             $resultDados = new conexao;
-            $dados = $resultDados->selecionaDados('SELECT *  FROM produtos WERE id = '.$id);
+            $dados = $resultDados->selecionaDados('SELECT *  FROM produtos WHERE id = '. $id);
             include_once 'painel/paginas/produtosItem.php';
             break;
         

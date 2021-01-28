@@ -47,19 +47,6 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <!--testando-->
-                                        <tr>
-                                            <td>
-                                                <form action="bd/conexao.php">
-                                                    <select name=" " id=""></select>
-                                                    
-                                                    
-                                                    
-                                                    
-                                                </form>
-                                            </td>
-                                        </tr>
-                                        
                                         
                                         <?php
                                         foreach ($dados as $dado) {
@@ -71,7 +58,7 @@
                                                 <td><?php echo $dado ['valor'];?></td>
                                                 <td>
                                                     <!--vizualiza-->
-                                                    <a href="?pg=Itens&id=<?php echo?>" class="btn btn-success">
+                                                    <a href="?pg=itens&id=<?php echo $dado['id']; ?>" class="btn btn-success">
                                                         <span class="fa fa-eye"></span>
                                                     </a>
                                                     <!--editar-->
