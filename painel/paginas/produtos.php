@@ -62,7 +62,7 @@
                                                         <span class="fa fa-eye"></span>
                                                     </a>
                                                     <!--editar-->
-                                                    <a href="#" class="btn btn-primary">
+                                                    <a href="?pg=editarItem&id=<?php echo $dado['id']; ?>" class="btn btn-primary">
                                                         <span class="fa fa-edit"></span>
                                                     </a>
                                                     <!--apagar-->

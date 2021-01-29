@@ -6,7 +6,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Detalhes do serviço </h1>
+                    <h1 class="m-0">Detalhes do cliente </h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -23,15 +23,15 @@
             <?php
             foreach ($dados as $dado) {
                  echo $dado ['nome'] . '<br />';
-                 echo $dado ['tipo'] . '<br />';
-                 echo $dado ['valor'] . '<br />';
+                 echo $dado ['email'] . '<br />';
+                 echo $dado ['mensagem'] . '<br />';
             }
             ?>
 
         </div>
     </section>
     <hr />
-    <a href="?pg=contato"><button class="btn btn-success">Voltar a lista de serviços</button></a>
+    <a href="?pg=contato"><button class="btn btn-success">Voltar a lista de contatos</button></a>
 
 
 </div>

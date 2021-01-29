@@ -22,10 +22,16 @@
                     <a href="?pg=produtos" class="nav-link">Produto</a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="#" class="nav-link">Sobre</a>
+                    <a href="?pg=sobre" class="nav-link">Sobre</a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="#" class="nav-link">Contato</a>
+                    <a href="?pg=contato" class="nav-link">Contato</a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="?pg=login" class="nav-link">Trocar de Usuário</a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="?pg=inicial" class="nav-link">Sair</a>
                 </li>
             </ul>
 

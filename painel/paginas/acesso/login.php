@@ -24,7 +24,7 @@
                     <p class="login-box-msg">
                         Faça login para iniciar sua sessão</p>
 
-                    <form action="?pg=dashboard" method="post">
+                    <form action="?pg=verificarlogin" method="post">
                         <div class="input-group mb-3">
                             <input name="usuario" type="text" class="form-control" placeholder="Usuário">
                             <div class="input-group-append">
@@ -57,9 +57,9 @@
 
 
                     <div class="row social-auth-links text-center mt-2 mb-3">
-                            <a href="?pg=inicial" class="btn btn-block btn-danger">
-                                Voltar ao site
-                            </a>
+                        <a href="?pg=inicial" class="btn btn-block btn-danger">
+                            Voltar ao site
+                        </a>
                     </div>
                     <!-- /.social-auth-links -->
 
@@ -77,6 +77,14 @@
             <!-- /.card -->
         </div>
         <!-- /.login-box -->
+        <hr />
+            <footer>
+                <strong>Copyright &copy; 2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
+                All rights reserved.
+                <div class="float-right d-none d-sm-inline-block">
+                    <b>Version</b> 3.1.0-rc
+                </div>
+            </footer>
 
         <!-- jQuery -->
         <script src="painel/plugins/jquery/jquery.min.js"></script>

@@ -22,13 +22,16 @@
         <div class="container-fluid">
             <?php
             foreach ($dados as $dado) {
-                 echo $dado ['nome'];
+                 echo $dado ['nome'] . '<br />';
+                 echo $dado ['tipo'] . '<br />';
+                 echo $dado ['valor'] . '<br />';
             }
             ?>
 
         </div>
     </section>
-
+    <hr />
+<a href="?pg=contato"><button class="btn btn-success">Voltar a lista de produtos</button></a>
 
 </div>
 

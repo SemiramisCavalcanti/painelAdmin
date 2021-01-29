@@ -57,7 +57,7 @@
                                                 <td><?php echo $dado ['mensagem']; ?></td>
                                                 <td>
                                                     <!--vizualiza-->
-                                                    <a href="#" class="btn btn-success">
+                                                    <a href="?pg=cliente&id=<?php echo $dado['id']; ?>" class="btn btn-success">
                                                         <span class="fa fa-eye"></span>
                                                     </a>
                                                     <!--editar-->
