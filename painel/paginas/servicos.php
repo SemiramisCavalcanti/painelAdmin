@@ -57,8 +57,9 @@
                                                 <td><?php echo $dado ['tipo']; ?></td>
                                                 <td><?php echo $dado ['valor']; ?></td>
                                                 <td>
+                                                   
                                                     <!--vizualiza-->
-                                                    <a href="#" class="btn btn-success">
+                                                    <a href="?pg=servico&id=<?php echo $dado['id']; ?>" class="btn btn-success">
                                                         <span class="fa fa-eye"></span>
                                                     </a>
                                                     <!--editar-->
@@ -80,10 +81,10 @@
                                     </tbody>
                                     <tfoot>
                                         <tr>
+                                            <th>Cod</th>
                                             <th>Serviço</th>
                                             <th>Tipo</th>
                                             <th>Valor</th>
-                                            <th>Estoque</th>
                                             <th></th>
                                         </tr>
                                     </tfoot>
