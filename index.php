@@ -38,19 +38,23 @@ if ($pg) {
             include_once 'painel/paginas/produtosItem.php';
             include_once 'painel/paginas/includes/footer.php';
             break;
-        
+
         case 'editarItem':
-            include_once 'painel/paginas/includes/header.php';
-            include_once 'painel/paginas/includes/menus.php';
-            
-            if ($_SERVER ['REQUEST_METHOD']=='POST') {
-//                funçao para atualização do produto
-                
-            } else{
+
+            if ($_SERVER ['REQUEST_METHOD'] == 'POST') {
+//                funçao para atualização do produto                
+            } else {
 //                mostrar dados do produto
+                $ideditarItem = isset($_GET['id']);
+                if ($ideditarItem) {
+                    $resultDados = new conexao;
+                    $dados = $resultDados->selecionaDados('SELECT *  FROM produtos WHERE id = ' . $ideditarItem);
+                    include_once 'painel/paginas/includes/header.php';
+                    include_once 'painel/paginas/includes/menus.php';
+                    include_once 'painel/paginas/editarItem.php';
+                    include_once 'painel/paginas/includes/footer.php';
+                }
             }
-            include_once 'painel/paginas/editarItem.php';
-            include_once 'painel/paginas/includes/footer.php';
             break;
 
         case 'servicos':
@@ -108,9 +112,8 @@ if ($pg) {
                 include_once 'painel/paginas/includes/menus.php';
                 include_once 'painel/paginas/dashboard.php';
                 include_once 'painel/paginas/includes/footer.php';
-                
             } else {
-                include_once 'painel/paginas/senhaerro.php';                
+                include_once 'painel/paginas/senhaerro.php';
             }
             break;
 
