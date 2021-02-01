@@ -4,9 +4,9 @@ include_once 'painel/bd/conexao.php';
 include_once 'painel/helper/funcoes.php';
 
 $pg = isset($_GET['pg']);
-
+  include_once 'painel/paginas/includes/header.php';
+  
 if ($pg) {
-
 
 
     switch ($_GET['pg']) {
@@ -22,7 +22,7 @@ if ($pg) {
         case 'produtos':
             $resultDados = new conexao;
             $dados = $resultDados->selecionaDados('SELECT *  FROM produtos');
-            include_once 'painel/paginas/includes/header.php';
+          
             include_once 'painel/paginas/includes/menus.php';
             include_once 'painel/paginas/produtos.php';
             include_once 'painel/paginas/includes/footer.php';
@@ -33,23 +33,25 @@ if ($pg) {
 
             $resultDados = new conexao;
             $dados = $resultDados->selecionaDados('SELECT *  FROM produtos WHERE id = ' . $id);
-            include_once 'painel/paginas/includes/header.php';
+     
             include_once 'painel/paginas/includes/menus.php';
             include_once 'painel/paginas/produtosItem.php';
             include_once 'painel/paginas/includes/footer.php';
             break;
 
         case 'editarItem':
+            
 
             if ($_SERVER ['REQUEST_METHOD'] == 'POST') {
 //                funçao para atualização do produto                
             } else {
 //                mostrar dados do produto
                 $ideditarItem = isset($_GET['id']);
+//                die ($ideditarItem); ele "mata" o que tem abaixo dele - para saber o que esta executando até ele
                 if ($ideditarItem) {
                     $resultDados = new conexao;
-                    $dados = $resultDados->selecionaDados('SELECT *  FROM produtos WHERE id = ' . $ideditarItem);
-                    include_once 'painel/paginas/includes/header.php';
+                    $dados = $resultDados->selecionaDados('SELECT * FROM'
+                            . ' produtos WHERE id = ' . $_GET['id']);
                     include_once 'painel/paginas/includes/menus.php';
                     include_once 'painel/paginas/editarItem.php';
                     include_once 'painel/paginas/includes/footer.php';
@@ -59,8 +61,7 @@ if ($pg) {
 
         case 'servicos':
             $resultDados = new conexao;
-            $dados = $resultDados->selecionaDados('SELECT *  FROM servicos');
-            include_once 'painel/paginas/includes/header.php';
+            $dados = $resultDados->selecionaDados('SELECT *  FROM servicos');   
             include_once 'painel/paginas/includes/menus.php';
             include_once 'painel/paginas/servicos.php';
             include_once 'painel/paginas/includes/footer.php';
@@ -71,7 +72,6 @@ if ($pg) {
 
             $resultDados = new conexao;
             $dados = $resultDados->selecionaDados('SELECT *  FROM servicos WHERE id = ' . $id);
-            include_once 'painel/paginas/includes/header.php';
             include_once 'painel/paginas/includes/menus.php';
             include_once 'painel/paginas/servico.php';
             include_once 'painel/paginas/includes/footer.php';
@@ -80,7 +80,6 @@ if ($pg) {
         case 'contato':
             $resultDados = new conexao;
             $dados = $resultDados->selecionaDados('SELECT *  FROM contato');
-            include_once 'painel/paginas/includes/header.php';
             include_once 'painel/paginas/includes/menus.php';
             include_once 'painel/paginas/contato.php';
             include_once 'painel/paginas/includes/footer.php';
@@ -98,7 +97,6 @@ if ($pg) {
             break;
 
         case 'dashboard':
-            include_once 'painel/paginas/includes/header.php';
             include_once 'painel/paginas/includes/menus.php';
             include_once 'painel/paginas/dashboard.php';
             include_once 'painel/paginas/includes/footer.php';
@@ -107,8 +105,6 @@ if ($pg) {
 
         case 'verificarlogin':
             if (verificarlogin()) {
-
-                include_once 'painel/paginas/includes/header.php';
                 include_once 'painel/paginas/includes/menus.php';
                 include_once 'painel/paginas/dashboard.php';
                 include_once 'painel/paginas/includes/footer.php';
@@ -123,7 +119,6 @@ if ($pg) {
     }
 } else {
 //não existes    
-    include_once 'painel/paginas/includes/header.php';
     include_once 'painel/paginas/includes/menus.php';
     include_once 'painel/paginas/erro.php';
     include_once 'painel/paginas/includes/footer.php';

@@ -41,16 +41,16 @@
                             <div class="card-body">
                                 <div class="form-group">
                                     <label for="nome">Nome do produto</label>
-                                    <input type="text" name="nome" class="form-control" id="nome" placeholder="Produto">
+                                    <input value="<?php echo $dado ['nome'];?>" type="text" name="nome" class="form-control" id="nome" placeholder="Produto">
 
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Classificação</label>
-                                    <input type="text" name="tipo" class="form-control" id="tipo" placeholder="Tipo do produto">
+                                    <input value="<?php echo $dado ['tipo'];?>" type="text" name="tipo" class="form-control" id="tipo" placeholder="Tipo do produto">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Preço</label>
-                                    <input type="text" name="valor" class="form-control" id="valor" placeholder="R$">
+                                    <input value="<?php echo $dado ['valor'];?>" type="text" name="valor" class="form-control" id="valor" placeholder="R$">
                                 </div>
 
                             </div>
