@@ -28,7 +28,7 @@
                     <div class="card card-success">
                         <div class="card-header">
                             <h3 class="card-title">           
-                                <?php
+                         <?php
                                 foreach ($dados as $dado) {
                                     echo $dado ['nome'] . '<br />';
                                 }
@@ -36,28 +36,27 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form action="?pg=editarItem" method="POST">
-
+                        <form  action="?pg=editarItem" method="POST">
+                            
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label for="nome">Nome do produto</label>
-                                    <input value="<?php echo $dado ['nome']; ?>" type="text" name="nome" class="form-control" id="nome" placeholder="Produto">
+                                    <label for="nome">Serviço</label>
+                                    <input value="<?php echo $dado ['nome'];?>" type="text" name="nome" class="form-control" id="nome" placeholder="Serviço">
 
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Classificação</label>
-                                    <input value="<?php echo $dado ['tipo']; ?>" type="text" name="tipo" class="form-control" id="tipo" placeholder="Tipo do produto">
+                                    <input value="<?php echo $dado ['tipo'];?>" type="text" name="tipo" class="form-control" id="tipo" placeholder="Tipo de serviço">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Preço</label>
-                                    <input value="<?php echo $dado ['valor']; ?>" type="text" name="valor" class="form-control" id="valor" placeholder="R$">
+                                    <input value="<?php echo $dado ['valor'];?>" type="text" name="valor" class="form-control" id="valor" placeholder="R$">
                                 </div>
-                                <input type="hidden" value="<?php echo $dado ['id']; ?>" name="id" />
 
                             </div>
                             <!-- /.card-body -->
                             <div class="card-footer text-right">
-                                <a href="?pg=produtos"><button type="submit" class="btn btn-success"><i class="fas fa-save" ></i> Atualizar</button></a>
+                                <button type="submit" class="btn btn-success"><i class="fas fa-save" ></i> Atualizar</button>
                             </div>
                         </form>
                     </div>
@@ -76,6 +75,11 @@
     <!-- /.content -->
 
     <hr />
-    <a href="?pg=produtos"><button class="btn btn-success ml-4"><i class="fas fa-reply" ></i> Voltar a lista de produtos</button></a>
+    
+       
+    <div class="col"><a href="?pg=produtos"><button class="btn btn-success ml-4"><i class="fas fa-reply" ></i> Voltar a lista de serviços</button></a></div>
+
+  
+ 
 
 </div>
