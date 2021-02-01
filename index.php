@@ -61,8 +61,8 @@ if ($pg) {
                 $atualizarProduto = new conexao();
                 $atualizarProduto->intervencaoNoBanco(''
                         . 'UPDATE produtos SET'
-                        . 'nome = :nome, '
-                        . 'tipo = :tipo, '
+                        . 'nome = :nome ,' 
+                        . 'tipo = :tipo ,' 
                         . 'valor = :valor '
                         . 'WHERE id = :id', $parametros
                 );
