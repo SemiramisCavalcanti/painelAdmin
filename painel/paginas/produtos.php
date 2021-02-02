@@ -1,4 +1,7 @@
-
+<?php
+$resultDados = new Conexao();
+$dados = $resultDados->selecionaDados('SELECT * FROM produtos');
+?>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -47,15 +50,15 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        
+
                                         <?php
                                         foreach ($dados as $dado) {
                                             ?>
                                             <tr>
-                                                <td><?php echo $dado ['id'];?></td>
-                                                <td><?php echo $dado ['nome'];?></td>
-                                                <td><?php echo $dado ['tipo'];?></td>
-                                                <td><?php echo $dado ['valor'];?></td>
+                                                <td><?php echo $dado ['id']; ?></td>
+                                                <td><?php echo $dado ['nome']; ?></td>
+                                                <td><?php echo $dado ['tipo']; ?></td>
+                                                <td><?php echo $dado ['valor']; ?></td>
                                                 <td>
                                                     <!--vizualiza-->
                                                     <a href="?pg=itens&id=<?php echo $dado['id']; ?>" class="btn btn-success">

@@ -37,28 +37,29 @@
                         <!-- /.card-header -->
                         <!-- form start -->
                         <form action="?pg=editarItem" method="POST">
+                            <?php foreach ($dados as $dado) { ?>
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label for="nome">Nome do produto</label>
+                                        <input value="<?php echo $dado ['nome']; ?>" type="text" name="nome" class="form-control" id="nome">
 
-                            <div class="card-body">
-                                <div class="form-group">
-                                    <label for="nome">Nome do produto</label>
-                                    <input value="<?php echo $dado ['nome']; ?>" type="text" name="nome" class="form-control" id="nome" placeholder="Produto">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="tipo">Classificação</label>
+                                        <input value="<?php echo $dado ['tipo']; ?>" type="text" name="tipo" class="form-control" id="tipo">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="valor">Preço</label>
+                                        <input value="<?php echo $dado ['valor']; ?>" type="text" name="valor" class="form-control" id="valor">
+                                    </div>
+                                    <input type="hidden" value="<?php echo $dado ['id']; ?>" name="id" />
 
                                 </div>
-                                <div class="form-group">
-                                    <label for="exampleInputPassword1">Classificação</label>
-                                    <input value="<?php echo $dado ['tipo']; ?>" type="text" name="tipo" class="form-control" id="tipo" placeholder="Tipo do produto">
+                                <!-- /.card-body -->
+                                <div class="card-footer text-right">
+                                    <a href="?pg=produtos"><button type="submit" class="btn btn-success"><i class="fas fa-save" ></i> Atualizar</button></a>
                                 </div>
-                                <div class="form-group">
-                                    <label for="exampleInputPassword1">Preço</label>
-                                    <input value="<?php echo $dado ['valor']; ?>" type="text" name="valor" class="form-control" id="valor" placeholder="R$">
-                                </div>
-                                <input type="hidden" value="<?php echo $dado ['id']; ?>" name="id" />
-
-                            </div>
-                            <!-- /.card-body -->
-                            <div class="card-footer text-right">
-                                <a href="?pg=produtos"><button type="submit" class="btn btn-success"><i class="fas fa-save" ></i> Atualizar</button></a>
-                            </div>
+                            <?php } ?>
                         </form>
                     </div>
                     <!-- /.card -->

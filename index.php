@@ -20,9 +20,6 @@ if ($pg) {
             break;
 
         case 'produtos':
-            $resultDados = new conexao;
-            $dados = $resultDados->selecionaDados('SELECT *  FROM produtos');
-
             include_once 'painel/paginas/includes/menus.php';
             include_once 'painel/paginas/produtos.php';
             include_once 'painel/paginas/includes/footer.php';
@@ -31,7 +28,7 @@ if ($pg) {
         case 'itens':
             $id = $_GET ['id'];
 
-            $resultDados = new conexao;
+            $resultDados = new conexao();
             $dados = $resultDados->selecionaDados('SELECT *  FROM produtos WHERE id = ' . $id);
 
             include_once 'painel/paginas/includes/menus.php';
@@ -45,30 +42,33 @@ if ($pg) {
             if ($_SERVER ['REQUEST_METHOD'] == 'POST') {
 //                funçao para atualização do produto
 //                    criando as variaveis
-                $id = $POST ['id'];
-                $nome = $POST ['nome'];
-                $tipo = $POST ['tipo'];
-                $valor = $POST ['valor'];
+               $id = $_POST ['id'];
+                $nome = $_POST ['nome'];
+                $tipo = $_POST ['tipo'];
+                $valor = $_POST ['valor'];
 //                       criando os "parametros" ou "p"
-                $parametros = array(
 //                   ''-> '', (sintaxe do array)
-                    ':id' => '$id',
-                    ':nome' => '$nome',
-                    ':tipo' => '$tipo',
-                    ':valor' => '$valor'
+                
+                $parametros = array(
+                    ':id' => $id,
+                    ':nome' => $nome,
+                    ':tipo' => $tipo,
+                    ':valor' => $valor
                 );
 //                atualização banco de dados
-                $atualizarProduto = new conexao();
+                $atualizarProduto = new Conexao();
+
                 $atualizarProduto->intervencaoNoBanco(''
-                        . 'UPDATE produtos SET'
-                        . 'nome = :nome ,' 
-                        . 'tipo = :tipo ,' 
+                        . 'UPDATE produtos SET '
+                        . 'nome = :nome, '
+                        . 'tipo = :tipo, '
                         . 'valor = :valor '
-                        . 'WHERE id = :id', $parametros
-                );
+                        . 'WHERE id = :id', $parametros);
 
-                header ('Location: ?pg=produtos');
-
+               
+                include_once 'painel/paginas/includes/menus.php';
+                include_once 'painel/paginas/produtos.php';
+                include_once 'painel/paginas/includes/footer.php';
 //                Banco de Dados -> Consulta -> (teste)
 //                UPDATE produtos SET
 //                nome = 'teclado numérico',
@@ -76,17 +76,20 @@ if ($pg) {
 //                valor = 55.25
 //                WHERE
 //                id = 2
-                
             } else {
 //                mostrar dados do produto
                 $ideditarItem = isset($_GET['id']);
 //                die ($ideditarItem); ele "mata" o que tem abaixo dele - para saber o que esta executando até ele
                 if ($ideditarItem) {
-                    $resultDados = new conexao;
+                    $resultDados = new conexao();
                     $dados = $resultDados->selecionaDados('SELECT * FROM'
                             . ' produtos WHERE id = ' . $_GET['id']);
                     include_once 'painel/paginas/includes/menus.php';
                     include_once 'painel/paginas/editarItem.php';
+                    include_once 'painel/paginas/includes/footer.php';
+                } else {
+                    include_once 'painel/paginas/includes/menus.php';
+                    include_once 'painel/paginas/erro.php';
                     include_once 'painel/paginas/includes/footer.php';
                 }
             }
@@ -112,24 +115,8 @@ if ($pg) {
             include_once 'painel/paginas/includes/footer.php';
             break;
 
-        case 'editarServico':
-
-            if ($_SERVER ['REQUEST_METHOD'] == 'POST') {
-//                funçao para atualização do produto                
-            } else {
-//                mostrar dados do produto
-                $ideditarItem = isset($_GET['id']);
-//                die ($ideditarItem); ele "mata" o que tem abaixo dele - para saber o que esta executando até ele
-                if ($ideditarItem) {
-                    $resultDados = new conexao;
-                    $dados = $resultDados->selecionaDados('SELECT * FROM'
-                            . ' servicos WHERE id = ' . $_GET['id']);
-                    include_once 'painel/paginas/includes/menus.php';
-                    include_once 'painel/paginas/editarServico.php';
-                    include_once 'painel/paginas/includes/footer.php';
-                }
-            }
-            break;
+//        case 'editarServico':
+//            break;
 
         case 'contato':
             $resultDados = new conexao;
@@ -150,25 +137,8 @@ if ($pg) {
             include_once 'painel/paginas/includes/footer.php';
             break;
 
-        case 'editarClientes':
-
-
-            if ($_SERVER ['REQUEST_METHOD'] == 'POST') {
-//                funçao para atualização do produto                
-            } else {
-//                mostrar dados do produto
-                $ideditarItem = isset($_GET['id']);
-//                die ($ideditarItem); ele "mata" o que tem abaixo dele - para saber o que esta executando até ele
-                if ($ideditarItem) {
-                    $resultDados = new conexao;
-                    $dados = $resultDados->selecionaDados('SELECT * FROM'
-                            . ' contato WHERE id = ' . $_GET['id']);
-                    include_once 'painel/paginas/includes/menus.php';
-                    include_once 'painel/paginas/editarClientes.php';
-                    include_once 'painel/paginas/includes/footer.php';
-                }
-            }
-            break;
+//        case 'editarClientes':
+//            break;
 
         case 'dashboard':
             include_once 'painel/paginas/includes/menus.php';
