@@ -37,18 +37,15 @@ if ($pg) {
             break;
 
         case 'editarItem':
-
-
             if ($_SERVER ['REQUEST_METHOD'] == 'POST') {
 //                funçao para atualização do produto
 //                    criando as variaveis
-               $id = $_POST ['id'];
+                $id = $_POST ['id'];
                 $nome = $_POST ['nome'];
                 $tipo = $_POST ['tipo'];
                 $valor = $_POST ['valor'];
 //                       criando os "parametros" ou "p"
-//                   ''-> '', (sintaxe do array)
-                
+//                   ''-> '', (sintaxe do array)               
                 $parametros = array(
                     ':id' => $id,
                     ':nome' => $nome,
@@ -57,15 +54,12 @@ if ($pg) {
                 );
 //                atualização banco de dados
                 $atualizarProduto = new Conexao();
-
                 $atualizarProduto->intervencaoNoBanco(''
                         . 'UPDATE produtos SET '
                         . 'nome = :nome, '
                         . 'tipo = :tipo, '
                         . 'valor = :valor '
                         . 'WHERE id = :id', $parametros);
-
-               
                 include_once 'painel/paginas/includes/menus.php';
                 include_once 'painel/paginas/produtos.php';
                 include_once 'painel/paginas/includes/footer.php';
@@ -93,6 +87,23 @@ if ($pg) {
                     include_once 'painel/paginas/includes/footer.php';
                 }
             }
+            break;
+
+        case 'excluirItem' :
+            $parametros = array(
+                ':id' => $_GET ['id'],
+            );
+            $resultDados = new conexao();
+            $resultDados->intervencaoNoBanco(''
+                    . 'DELETE FROM produtos WHERE id = :id', $parametros);
+            header('Location: ?pg=produtos');
+            break;
+
+        case 'inserirItem':
+
+            include_once 'painel/paginas/includes/menus.php';
+            include_once 'painel/paginas/inserirItem.php';
+            include_once 'painel/paginas/includes/footer.php';
             break;
 
 
@@ -158,7 +169,9 @@ if ($pg) {
             break;
 
         default:
+            include_once 'painel/paginas/includes/menus.php';
             include_once 'painel/paginas/erro.php';
+            include_once 'painel/paginas/includes/footer.php';
             break;
     }
 } else {

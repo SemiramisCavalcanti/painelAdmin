@@ -46,7 +46,9 @@ $dados = $resultDados->selecionaDados('SELECT * FROM produtos');
                                             <th>Produto</th>
                                             <th>Tipo</th>
                                             <th>Valor</th>
-                                            <th></th>
+                                            <th><a href="?pg=inserirItem" class="btn btn-warning"> 
+                                                        <span class="fa fa-plus"></span> <strong> Criar produto</strong>
+                                                    </a> </th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -69,7 +71,7 @@ $dados = $resultDados->selecionaDados('SELECT * FROM produtos');
                                                         <span class="fa fa-edit"></span>
                                                     </a>
                                                     <!--apagar-->
-                                                    <a href="#" class="btn btn-secondary">
+                                                    <a href="?pg=excluirItem&id=<?php echo $dado['id']; ?>" class="btn btn-secondary">
                                                         <span class="fa fa-trash"></span>
                                                     </a>
                                                 </td>
