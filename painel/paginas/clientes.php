@@ -31,7 +31,7 @@
         </div>
     </section>
     <hr />
-    <a href="?pg=contato"><button class="btn btn-success">Voltar a lista de contatos</button></a>
+    <a href="?pg=contato"><button class="btn btn-success ml-3"><i class="fas fa-save"></i> Voltar a lista de produtos</button></a>
 
 
 </div>

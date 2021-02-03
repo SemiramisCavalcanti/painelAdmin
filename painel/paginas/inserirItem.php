@@ -70,6 +70,6 @@
     <!-- /.content -->
 
     <hr />
-    <a href="?pg=produtos"><button class="btn btn-success ml-4"><i class="fas fa-reply" ></i> Voltar a lista de produtos</button></a>
+    <a href="?pg=produtos"><button class="btn btn-success ml-3"><i class="fas fa-reply" ></i> Voltar a lista de produtos</button></a>
 
 </div>

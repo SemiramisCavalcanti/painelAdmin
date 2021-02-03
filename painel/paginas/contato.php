@@ -65,7 +65,7 @@
                                                         <span class="fa fa-edit"></span>
                                                     </a>
                                                     <!--apagar-->
-                                                    <a href="#" class="btn btn-secondary">
+                                                    <a href="?pg=excluirCliente&id=<?php echo $dado['id']; ?>" class="btn btn-secondary">
                                                         <span class="fa fa-trash"></span>
                                                     </a>
                                                 </td>
