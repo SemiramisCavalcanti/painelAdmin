@@ -1,4 +1,7 @@
-
+<?php
+$resultDados = new Conexao();
+$dados = $resultDados->selecionaDados('SELECT * FROM contato');
+?>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -61,7 +64,7 @@
                                                         <span class="fa fa-eye"></span>
                                                     </a>
                                                     <!--editar-->
-                                                    <a href="?pg=editarClientes&id=<?php echo $dado['id']; ?>" class="btn btn-primary">
+                                                    <a href="?pg=editarCliente&id=<?php echo $dado['id']; ?>" class="btn btn-primary">
                                                         <span class="fa fa-edit"></span>
                                                     </a>
                                                     <!--apagar-->

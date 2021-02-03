@@ -126,9 +126,7 @@ if ($pg) {
             include_once 'painel/paginas/includes/footer.php';
             break;
 
-//        case 'editarServico':
-//            break;
-        case 'editarItem':
+        case 'editarServico':
             if ($_SERVER ['REQUEST_METHOD'] == 'POST') {
 //                funçao para atualização do produto
 //                    criando as variaveis
@@ -145,15 +143,15 @@ if ($pg) {
                     ':valor' => $valor
                 );
 //                atualização banco de dados
-                $atualizarProduto = new Conexao();
-                $atualizarProduto->intervencaoNoBanco(''
-                        . 'UPDATE produtos SET '
+                $atualizarServico = new Conexao();
+                $atualizarServico->intervencaoNoBanco(''
+                        . 'UPDATE servicos SET '
                         . 'nome = :nome, '
                         . 'tipo = :tipo, '
                         . 'valor = :valor '
                         . 'WHERE id = :id', $parametros);
                 include_once 'painel/paginas/includes/menus.php';
-                include_once 'painel/paginas/produtos.php';
+                include_once 'painel/paginas/servicos.php';
                 include_once 'painel/paginas/includes/footer.php';
 //                Banco de Dados -> Consulta -> (teste)
 //                UPDATE produtos SET
@@ -164,14 +162,14 @@ if ($pg) {
 //                id = 2
             } else {
 //                mostrar dados do produto
-                $ideditarItem = isset($_GET['id']);
+                $ideditarServico = isset($_GET['id']);
 //                die ($ideditarItem); ele "mata" o que tem abaixo dele - para saber o que esta executando até ele
-                if ($ideditarItem) {
+                if ($ideditarServico) {
                     $resultDados = new conexao();
                     $dados = $resultDados->selecionaDados('SELECT * FROM'
-                            . ' produtos WHERE id = ' . $_GET['id']);
+                            . ' servicos WHERE id = ' . $_GET['id']);
                     include_once 'painel/paginas/includes/menus.php';
-                    include_once 'painel/paginas/editarItem.php';
+                    include_once 'painel/paginas/editarServico.php';
                     include_once 'painel/paginas/includes/footer.php';
                 } else {
                     include_once 'painel/paginas/includes/menus.php';
@@ -213,6 +211,59 @@ if ($pg) {
 
 //        case 'editarClientes':
 //            break;
+        case 'editarCliente':
+            if ($_SERVER ['REQUEST_METHOD'] == 'POST') {
+//                funçao para atualização do produto
+//                    criando as variaveis
+                $id = $_POST ['id'];
+                $nome = $_POST ['nome'];
+                $email = $_POST ['email'];
+                $mensagem = $_POST ['mensagem'];
+//                       criando os "parametros" ou "p"
+//                   ''-> '', (sintaxe do array)               
+                $parametros = array(
+                    ':id' => $id,
+                    ':nome' => $nome,
+                    ':email' => $email,
+                    ':mensagem' => $mensagem
+                );
+//                atualização banco de dados
+                $atualizarCliente = new Conexao();
+                $atualizarCliente->intervencaoNoBanco(''
+                        . 'UPDATE contato SET '
+                        . 'nome = :nome, '
+                        . 'email = :email, '
+                        . 'mensagem = :mensagem '
+                        . 'WHERE id = :id', $parametros);
+                include_once 'painel/paginas/includes/menus.php';
+                include_once 'painel/paginas/conato.php';
+                include_once 'painel/paginas/includes/footer.php';
+//                Banco de Dados -> Consulta -> (teste)
+//                UPDATE produtos SET
+//                nome = 'teclado numérico',
+//                tipo = 'periferico',
+//                valor = 55.25
+//                WHERE
+//                id = 2
+            } else {
+//                mostrar dados do produto
+                $ideditarCliente = isset($_GET['id']);
+//                die ($ideditarItem); ele "mata" o que tem abaixo dele - para saber o que esta executando até ele
+                if ($ideditarCliente) {
+                    $resultDados = new conexao();
+                    $dados = $resultDados->selecionaDados('SELECT * FROM'
+                            . ' contato WHERE id = ' . $_GET['id']);
+                    include_once 'painel/paginas/includes/menus.php';
+                    include_once 'painel/paginas/editarClientes.php';
+                    include_once 'painel/paginas/includes/footer.php';
+                } else {
+                    include_once 'painel/paginas/includes/menus.php';
+                    include_once 'painel/paginas/erro.php';
+                    include_once 'painel/paginas/includes/footer.php';
+                }
+            }
+            break;
+        
         case 'excluirCliente' :
             $parametros = array(
                 ':id' => $_GET ['id'],

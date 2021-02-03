@@ -1,37 +1,62 @@
-
+<?php
+foreach ($dados as $dado) {
+    
+}
+?>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
-    <div class="content-header">
+    <section class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Detalhes do produto </h1>
-                </div><!-- /.col -->
+                    <h1>Blank Page</h1>
+                </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Dashboard v1</li>
+                        <li class="breadcrumb-item active">Blank Page</li>
                     </ol>
-                </div><!-- /.col -->
-            </div><!-- /.row -->
+                </div>
+            </div>
         </div><!-- /.container-fluid -->
-    </div>
-    <!-- /.content-header -->
-    <section class="content">
-        <div class="container-fluid">
-            <?php
-            foreach ($dados as $dado) {
-                 echo $dado ['nome'] . '<br />';
-                 echo $dado ['tipo'] . '<br />';
-                 echo $dado ['valor'] . '<br />';
-            }
-            ?>
-
-        </div>
     </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+        <!-- Default box -->
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">       
+                    <?php echo $dado['nome']; ?></h3>
+
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card-body">
+                Start creating your amazing application!
+            </div>
+            <!-- /.card-body -->
+            <div class="card-footer">
+                Footer
+            </div>
+            <!-- /.card-footer-->
+        </div>
+        <!-- /.card -->
+
+    </section>
+    <!-- /.content -->
+    <?php
+    ?>
     <hr />
-<a href="?pg=produtos"><button class="btn btn-success ml-3"><i class="fas fa-save"></i> Voltar a lista de produtos</button></a>
+    <a href="?pg=produtos"><button class="btn btn-success ml-3"><i class="fas fa-save"></i> Voltar a lista de produtos</button></a>
 
 </div>
-
+<!-- /.content-wrapper -->

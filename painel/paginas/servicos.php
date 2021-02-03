@@ -1,3 +1,7 @@
+<?php
+$resultDados = new Conexao();
+$dados = $resultDados->selecionaDados('SELECT * FROM servicos');
+?>
 
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
