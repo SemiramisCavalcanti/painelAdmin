@@ -40,17 +40,17 @@
                             <?php foreach ($dados as $dado) { ?>
                                 <div class="card-body">
                                     <div class="form-group">
-                                        <label for="nome">Nome do produto</label>
+                                        <label for="nome">Nome do completo</label>
                                         <input value="<?php echo $dado ['nome']; ?>" type="text" name="nome" class="form-control" id="nome">
 
                                     </div>
                                     <div class="form-group">
-                                        <label for="tipo">Classificação</label>
-                                        <input value="<?php echo $dado ['tipo']; ?>" type="text" name="tipo" class="form-control" id="tipo">
+                                        <label for="email">E-mail</label>
+                                        <input value="<?php echo $dado ['email']; ?>" type="text" name="email" class="form-control" id="email">
                                     </div>
                                     <div class="form-group">
-                                        <label for="valor">Preço</label>
-                                        <input value="<?php echo $dado ['valor']; ?>" type="text" name="valor" class="form-control" id="valor">
+                                        <label for="mensagem">Mensagem</label>
+                                        <input value="<?php echo $dado ['mensagem']; ?>" type="text" name="mensagem" class="form-control" id="mensagem" disabled>
                                     </div>
                                     <input type="hidden" value="<?php echo $dado ['id']; ?>" name="id" />
 
