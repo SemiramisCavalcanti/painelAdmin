@@ -4,22 +4,27 @@ include_once 'painel/bd/conexao.php';
 include_once 'painel/helper/funcoes.php';
 
 $pg = isset($_GET['pg']);
-include_once 'painel/paginas/includes/header.php';
+
 
 if ($pg) {
 
 
     switch ($_GET['pg']) {
         case 'login':
+            include_once 'painel/paginas/includes/header.php';
             include_once 'painel/paginas/acesso/login.php';
 
             break;
 
         case 'inicial':
-            include_once 'painel/site/inicio.php';
+            include_once 'site/paginas/include/header.php';
+            include_once 'site/paginas/include/navegacao.php';
+            include_once 'site/paginas/inicio.php';
+            include_once 'site/paginas/include/footer.php';
             break;
 
         case 'produtos':
+            include_once 'painel/paginas/includes/header.php';
             include_once 'painel/paginas/includes/menus.php';
             include_once 'painel/paginas/produtos.php';
             include_once 'painel/paginas/includes/footer.php';
@@ -30,7 +35,7 @@ if ($pg) {
 
             $resultDados = new conexao();
             $dados = $resultDados->selecionaDados('SELECT *  FROM produtos WHERE id = ' . $id);
-
+            include_once 'painel/paginas/includes/header.php';
             include_once 'painel/paginas/includes/menus.php';
             include_once 'painel/paginas/produtosItem.php';
             include_once 'painel/paginas/includes/footer.php';
@@ -60,6 +65,7 @@ if ($pg) {
                         . 'tipo = :tipo, '
                         . 'valor = :valor '
                         . 'WHERE id = :id', $parametros);
+                include_once 'painel/paginas/includes/header.php';
                 include_once 'painel/paginas/includes/menus.php';
                 include_once 'painel/paginas/produtos.php';
                 include_once 'painel/paginas/includes/footer.php';
@@ -78,10 +84,12 @@ if ($pg) {
                     $resultDados = new conexao();
                     $dados = $resultDados->selecionaDados('SELECT * FROM'
                             . ' produtos WHERE id = ' . $_GET['id']);
+                    include_once 'painel/paginas/includes/header.php';
                     include_once 'painel/paginas/includes/menus.php';
                     include_once 'painel/paginas/editarItem.php';
                     include_once 'painel/paginas/includes/footer.php';
                 } else {
+                    include_once 'painel/paginas/includes/header.php';
                     include_once 'painel/paginas/includes/menus.php';
                     include_once 'painel/paginas/erro.php';
                     include_once 'painel/paginas/includes/footer.php';
@@ -100,7 +108,7 @@ if ($pg) {
             break;
 
         case 'inserirItem':
-
+            include_once 'painel/paginas/includes/header.php';
             include_once 'painel/paginas/includes/menus.php';
             include_once 'painel/paginas/inserirItem.php';
             include_once 'painel/paginas/includes/footer.php';
@@ -111,6 +119,7 @@ if ($pg) {
         case 'servicos':
             $resultDados = new conexao;
             $dados = $resultDados->selecionaDados('SELECT *  FROM servicos');
+            include_once 'painel/paginas/includes/header.php';
             include_once 'painel/paginas/includes/menus.php';
             include_once 'painel/paginas/servicos.php';
             include_once 'painel/paginas/includes/footer.php';
@@ -121,6 +130,7 @@ if ($pg) {
 
             $resultDados = new conexao;
             $dados = $resultDados->selecionaDados('SELECT *  FROM servicos WHERE id = ' . $id);
+            include_once 'painel/paginas/includes/header.php';
             include_once 'painel/paginas/includes/menus.php';
             include_once 'painel/paginas/servico.php';
             include_once 'painel/paginas/includes/footer.php';
@@ -150,6 +160,7 @@ if ($pg) {
                         . 'tipo = :tipo, '
                         . 'valor = :valor '
                         . 'WHERE id = :id', $parametros);
+                include_once 'painel/paginas/includes/header.php';
                 include_once 'painel/paginas/includes/menus.php';
                 include_once 'painel/paginas/servicos.php';
                 include_once 'painel/paginas/includes/footer.php';
@@ -168,17 +179,19 @@ if ($pg) {
                     $resultDados = new conexao();
                     $dados = $resultDados->selecionaDados('SELECT * FROM'
                             . ' servicos WHERE id = ' . $_GET['id']);
+                    include_once 'painel/paginas/includes/header.php';
                     include_once 'painel/paginas/includes/menus.php';
                     include_once 'painel/paginas/editarServico.php';
                     include_once 'painel/paginas/includes/footer.php';
                 } else {
+                    include_once 'painel/paginas/includes/header.php';
                     include_once 'painel/paginas/includes/menus.php';
                     include_once 'painel/paginas/erro.php';
                     include_once 'painel/paginas/includes/footer.php';
                 }
             }
             break;
-        
+
         case 'excluirServico' :
             $parametros = array(
                 ':id' => $_GET ['id'],
@@ -188,11 +201,12 @@ if ($pg) {
                     . 'DELETE FROM servicos WHERE id = :id', $parametros);
             header('Location: ?pg=servicos');
             break;
-        
+
 
         case 'contato':
             $resultDados = new conexao;
             $dados = $resultDados->selecionaDados('SELECT *  FROM contato');
+            include_once 'painel/paginas/includes/header.php';
             include_once 'painel/paginas/includes/menus.php';
             include_once 'painel/paginas/contato.php';
             include_once 'painel/paginas/includes/footer.php';
@@ -235,6 +249,7 @@ if ($pg) {
                         . 'email = :email, '
                         . 'mensagem = :mensagem '
                         . 'WHERE id = :id', $parametros);
+                include_once 'painel/paginas/includes/header.php';
                 include_once 'painel/paginas/includes/menus.php';
                 include_once 'painel/paginas/conato.php';
                 include_once 'painel/paginas/includes/footer.php';
@@ -253,17 +268,19 @@ if ($pg) {
                     $resultDados = new conexao();
                     $dados = $resultDados->selecionaDados('SELECT * FROM'
                             . ' contato WHERE id = ' . $_GET['id']);
+                    include_once 'painel/paginas/includes/header.php';
                     include_once 'painel/paginas/includes/menus.php';
                     include_once 'painel/paginas/editarClientes.php';
                     include_once 'painel/paginas/includes/footer.php';
                 } else {
+                    include_once 'painel/paginas/includes/header.php';
                     include_once 'painel/paginas/includes/menus.php';
                     include_once 'painel/paginas/erro.php';
                     include_once 'painel/paginas/includes/footer.php';
                 }
             }
             break;
-        
+
         case 'excluirCliente' :
             $parametros = array(
                 ':id' => $_GET ['id'],
@@ -273,10 +290,11 @@ if ($pg) {
                     . 'DELETE FROM contato WHERE id = :id', $parametros);
             header('Location: ?pg=contato');
             break;
-        
-        
+
+
 
         case 'dashboard':
+            include_once 'painel/paginas/includes/header.php';
             include_once 'painel/paginas/includes/menus.php';
             include_once 'painel/paginas/dashboard.php';
             include_once 'painel/paginas/includes/footer.php';
@@ -285,6 +303,7 @@ if ($pg) {
 
         case 'verificarlogin':
             if (verificarlogin()) {
+                include_once 'painel/paginas/includes/header.php';
                 include_once 'painel/paginas/includes/menus.php';
                 include_once 'painel/paginas/dashboard.php';
                 include_once 'painel/paginas/includes/footer.php';
@@ -294,6 +313,7 @@ if ($pg) {
             break;
 
         default:
+            include_once 'painel/paginas/includes/header.php';
             include_once 'painel/paginas/includes/menus.php';
             include_once 'painel/paginas/erro.php';
             include_once 'painel/paginas/includes/footer.php';
@@ -301,10 +321,13 @@ if ($pg) {
     }
 } else {
 //não existes    
+    include_once 'painel/paginas/includes/header.php';
     include_once 'painel/paginas/includes/menus.php';
     include_once 'painel/paginas/erro.php';
     include_once 'painel/paginas/includes/footer.php';
 }
+
+
 
         
         
