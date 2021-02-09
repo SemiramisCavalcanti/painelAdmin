@@ -10,7 +10,7 @@
                     <ul class="breadcrumb float-sm-right ">
                         <li class="mr-3"><a class="text-light" href="?pg=inicial">Home</a></li>
                         <li class="mr-3"><a class="text-light" href="?pg=sobre">Sobre</a></li>
-                        <li class="mr-3"><a class="text-light" href="?pg=sitecontato">Contato</a></li>
+                        <li class="mr-3"><a class="text-light" href="?pg=contatosite">Contato</a></li>
                         <li class=""><a class="text-light" href="?pg=login">Login</a></li>
 
                     </ul>
@@ -65,8 +65,8 @@
                 </div>
             </div>
 
-            <div class="row asideSite btn-light">
-                <div class="col ml-3 mt-3">
+            <div class="row asideSite">
+                <div class="col ml-3 mt-3 btn-light p-2">
                     <a href="#" class="text-dark">
 
                         <img class="rounded img-fluid w-75" src="https://static-cse.canva.com/blob/183499/IMAGE-1.jpg" alt="" />
@@ -75,7 +75,7 @@
                     </a>
                 </div>
 
-                <div class="col ml-3 mt-3">
+                <div class="col ml-3 mt-3 btn-light p-2">
                     <a href="#" class="text-dark">
                         <img class="rounded img-fluid w-75" src="https://static-cse.canva.com/blob/183499/IMAGE-1.jpg" alt="" />
                         <h6 class=" m-2" >MUSSUM <br />
