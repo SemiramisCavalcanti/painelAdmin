@@ -1,0 +1,21 @@
+body {
+    overflow-x: hidden
+}
+
+.asideSite{
+    width: 250px;
+    margin-bottom: 10px;
+    text-decoration: none;
+        
+}
+
+.asideSite p{
+    font-size: 12px;
+    margin-left: -20px
+}
+        
+.asideSite h6{
+    font-size: 16px;
+    margin-left: -16px
+    
+}

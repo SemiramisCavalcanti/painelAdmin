@@ -1,24 +1,4 @@
 <!-- Content Wrapper. Contains page content -->
-<div class="">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-        <div class="container-fluid">
-            <div class="row mb-2 bg-pink color-palette p-3 rounded">
-                <div class="col-sm-6">
-                    <h1>Pagina Inicial</h1>
-                </div>
-                <div class="col-sm-6">
-                    <ul class="breadcrumb float-sm-right ">
-                        <li class="mr-3"><a class="text-light" href="?pg=inicial">Home</a></li>
-                        <li class="mr-3"><a class="text-light" href="?pg=sobre">Sobre</a></li>
-                        <li class="mr-3"><a class="text-light" href="?pg=sitecontato">Contato</a></li>
-                        <li class=""><a class="text-light" href="?pg=login">Login</a></li>
-
-                    </ul>
-                </div>
-            </div>
-        </div><!-- /.container-fluid -->
-    </section>
 
     <div class="wrapper">
        
@@ -152,5 +132,4 @@
         <!-- /.content -->
 
     </div>
-</div>
 <!-- /.content-wrapper -->
