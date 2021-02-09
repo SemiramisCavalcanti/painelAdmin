@@ -133,26 +133,29 @@
                             </div>
                             <!-- END timeline item -->
                             <!-- timeline item -->
-                           <div>
+                            <div>
                                 <i class="fas fa-road bg-info"></i>
                                 <div class="timeline-item text-center">
 
                                     <div class="timeline-header row">
                                         <div class="col">
-                                        <a href="?pg=sobre"><button class="btn btn-info btn-sm "><i class="fas fa-angle-double-up"></i> Topo</button></a>  
+                                            <a href="?pg=sobre"><button class="btn btn-info btn-sm "><i class="fas fa-angle-double-up"></i> Topo</button></a>  
                                         </div>
                                         <div class="col">
-                                           <a href="?pg=inicial"><button class="btn btn-info btn-sm "><i class="fas fa-home"></i> Home</button></a>
+                                            <a href="?pg=inicial"><button class="btn btn-info btn-sm "><i class="fas fa-home"></i> Home</button></a>
+                                        </div>
+                                        <div class="col">
+                                            <a href="?pg=contatosite"><button class="btn btn-info btn-sm "><i class="fas fa-user-friends"></i> Contato</button></a>
                                         </div>
                                         <div class="col">
                                             <a href="?pg=login"><button class="btn btn-info btn-sm "><i class="fas fa-sign-in-alt"></i> Login</button></a>
                                         </div>
-                                        
+
                                     </div>
                                 </div>
                             </div>
                             <!-- END timeline item -->
-                            
+
                             <div>
                                 <i class="fas fa-times bg-gray"></i>
                             </div>

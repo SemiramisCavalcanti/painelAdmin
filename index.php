@@ -11,8 +11,10 @@ if ($pg) {
 
     switch ($_GET['pg']) {
         case 'login':
-            include_once 'painel/paginas/includes/header.php';
+            include_once 'site/paginas/include/header.php';
+            include_once 'site/paginas/include/navegacao.php';
             include_once 'painel/paginas/acesso/login.php';
+            include_once 'site/paginas/include/footer.php';
 
             break;
 

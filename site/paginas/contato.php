@@ -12,7 +12,7 @@
                         <div class="timeline">
                             <!-- timeline time label -->
                             <div class="time-label">
-                                <span class="bg-red">Sobre</span>
+                                <span class="bg-red">Contato</span>
                             </div>
                             <!-- /.timeline-label -->
                             <!-- timeline item -->
@@ -51,7 +51,7 @@
                                 </div>
                             </div>
                             <!-- END timeline item -->
-                            
+
                             <!-- timeline item -->
                             <div>
                                 <i class="fas fa-user-check bg-blue"></i>
@@ -59,10 +59,34 @@
                                     <h3 class="timeline-header"><a href="#">Cadastro</a> ...</h3>
 
                                     <div class="timeline-body">
-                                        Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles,
-                                        weebly ning heekya handango imeem plugg dopplr jibjab, movity
-                                        jajah plickers sifteo edmodo ifttt zimbra. Babblely odeo kaboodle
-                                        quora plaxo ideeli hulu weebly balihoo...
+                                        <form action="?pg=inserirContato" method="POST">
+                                            <div class="card-body row">
+                                                <div class="form-group col">
+                                                    <label for="nome">Nome completo</label>
+                                                    <input type="text" name="nome" class="form-control" id="nome" placeholder="Nome">
+
+                                                </div>
+                                                <div class="form-group col">
+                                                    <label for="tipo">Email</label>
+                                                    <input type="text" name="email" class="form-control" id="email" placeholder="nome@email.com">
+                                                </div>
+                                                
+                                            </div>
+                                            <!-- /.card-body -->
+                                            <div class="card-footer row ">
+                                                <div class="col text-left">
+                                                    <div class="icheck-primary">
+                                                    <input type="checkbox" id="remember">
+                                                    <label for="remember">
+                                                       Desejo receber notícias
+                                                    </label>
+                                                </div></div>
+                                                <div class="col text-right  ">
+                                                <a href="?pg=produtos"><button type="submit" class="btn btn-primary"><i class="fas fa-plus" ></i> Enviar</button></a>
+                                                    
+                                                </div>
+                                            </div>
+                                        </form>
                                     </div>
 
                                 </div>
@@ -120,7 +144,7 @@
                                             <a href="?pg=inicial"><button class="btn btn-info btn-sm "><i class="fas fa-home"></i> Home</button></a>
                                         </div>
                                         <div class="col">
-                                            <a href="?pg=sobre"><button class="btn btn-info btn-sm "><i class="fas fa-home"></i> Sobre</button></a>
+                                            <a href="?pg=sobre"><button class="btn btn-info btn-sm "><i class="fas fa-book-open"></i> Sobre</button></a>
                                         </div>
                                         <div class="col">
                                             <a href="?pg=login"><button class="btn btn-info btn-sm "><i class="fas fa-sign-in-alt"></i> Login</button></a>
