@@ -22,7 +22,28 @@ if ($pg) {
             include_once 'site/paginas/inicio.php';
             include_once 'site/paginas/include/footer.php';
             break;
+        
+        case 'contatosite':
+            include_once 'site/paginas/include/header.php';
+            include_once 'site/paginas/include/navegacao.php';
+            include_once 'site/paginas/contato.php';
+            include_once 'site/paginas/include/footer.php';
+            break;
+        
+        case 'sobre':
+            include_once 'site/paginas/include/header.php';
+            include_once 'site/paginas/include/navegacao.php';
+            include_once 'site/paginas/sobre.php';
+            include_once 'site/paginas/include/footer.php';
+            break;
 
+        case 'produtossite':
+            include_once 'site/paginas/includes/header.php';
+            include_once 'site/paginas/includes/menus.php';
+            include_once 'site/paginas/produtos.php';
+            include_once 'site/paginas/includes/footer.php';
+            break;
+        
         case 'produtos':
             include_once 'painel/paginas/includes/header.php';
             include_once 'painel/paginas/includes/menus.php';
