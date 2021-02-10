@@ -152,7 +152,26 @@ if ($pg) {
         case 'inserirItem':
             include_once 'painel/paginas/includes/header.php';
             include_once 'painel/paginas/includes/menus.php';
+            if ($_SERVER ['REQUEST_METHOD']== 'POST'){
+//                pegando variaveis via post
+                $nome = $_POST['nome'];
+                $tipo = $_POST['tipo'];
+                $valor = $_POST['valor'];
+//                tratar os dados enviados via post
+                $parametros = array(''
+                        . ':nome' => $nome,
+                         ':tipo' => $tipo,
+                         ':valor' => $valor,
+                        );
+                $resultDados = new conexao();
+                $resultDados->intervencaoNoBanco('INSERT INTO '
+                        . 'produtos (nome, tipo, valor) '
+                        . 'VALUES (:nome, :tipo, :valor)', $parametros);
+                include_once 'painel/paginas/produtos.php';
+            } else {
             include_once 'painel/paginas/inserirItem.php';
+                
+            }
             include_once 'painel/paginas/includes/footer.php';
             break;
 
@@ -243,6 +262,34 @@ if ($pg) {
                     . 'DELETE FROM servicos WHERE id = :id', $parametros);
             header('Location: ?pg=servicos');
             break;
+        
+        case 'inserirServico':
+            include_once 'painel/paginas/includes/header.php';
+            include_once 'painel/paginas/includes/menus.php';
+            if ($_SERVER ['REQUEST_METHOD']== 'POST'){
+//                pegando variaveis via post
+                $nome = $_POST['nome'];
+                $tipo = $_POST['tipo'];
+                $valor = $_POST['valor'];
+//                tratar os dados enviados via post
+                $parametros = array(''
+                        . ':nome' => $nome,
+                         ':tipo' => $tipo,
+                         ':valor' => $valor,
+                        );
+                $resultDados = new conexao();
+                $resultDados->intervencaoNoBanco('INSERT INTO '
+                        . 'servicos (nome, tipo, valor) '
+                        . 'VALUES (:nome, :tipo, :valor)', $parametros);
+                include_once 'painel/paginas/servicos.php';
+            } else {
+            include_once 'painel/paginas/inserirServico.php';
+                
+            }
+            include_once 'painel/paginas/includes/footer.php';
+            break;
+
+
 
 
         case 'contato':

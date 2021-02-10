@@ -48,7 +48,9 @@ $dados = $resultDados->selecionaDados('SELECT * FROM servicos');
                                             <th>Serviço</th>
                                             <th>Tipo</th>
                                             <th>Valor</th>
-                                            <th></th>
+                                            <th><a href="?pg=inserirServico" class="btn btn-warning"> 
+                                                        <span class="fa fa-plus"></span> <strong> Criar serviço</strong>
+                                                    </a> </th>
                                         </tr>
                                     </thead>
                                     <tbody>
