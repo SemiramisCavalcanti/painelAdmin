@@ -46,7 +46,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="email">E-mail</label>
-                                        <input value="<?php echo $dado ['email']; ?>" type="text" name="email" class="form-control" id="email">
+                                        <input value="<?php echo $dado ['email']; ?>" type="text" name="email" class="form-control" id="email" disabled>
                                     </div>
                                     <div class="form-group">
                                         <label for="mensagem">Mensagem</label>

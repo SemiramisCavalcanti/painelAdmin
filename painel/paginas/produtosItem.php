@@ -24,7 +24,6 @@ foreach ($dados as $dado) {
 
     <!-- Main content -->
     <section class="content">
-
         <!-- Default box -->
         <div class="card">
             <div class="card-header">
@@ -66,8 +65,25 @@ foreach ($dados as $dado) {
 
             </div>
             <!-- /.card-body -->
-            <div class="card-footer">
-                Footer
+            <div class="card-footer text-right">
+                    <?php
+                    foreach ($dados as $dado) {
+                        ?>
+                                <!--vizualiza-->
+                                <a href="?pg=inserirItem" class="btn btn-warning">
+                                    <span class="fa fa-plus"></span>
+                                </a>
+                                <!--editar-->
+                                <a href="?pg=editarItem&id=<?php echo $dado['id']; ?>" class="btn btn-primary">
+                                    <span class="fa fa-edit"></span>
+                                </a>
+                                <!--apagar-->
+                                <a href="?pg=excluirItem&id=<?php echo $dado['id']; ?>" class="btn btn-secondary mr-5">
+                                    <span class="fa fa-trash"></span>
+                                </a>
+                        <?php
+                    }
+                    ?>
             </div>
             <!-- /.card-footer-->
         </div>
