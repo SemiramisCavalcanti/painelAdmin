@@ -34,8 +34,13 @@ $dados = $resultDados->selecionaDados('SELECT * FROM produtos');
                         <!-- /.card-header -->
 
                         <div class="card">
-                            <div class="card-header">
-                                <h3 class="card-title">DataTable com recursos padrão</h3>
+                            <div class="card-header text-right">
+             
+                                <!-- Navbar Search -->
+                                <div id="example1_filter" class="dataTables_filter">
+                                    <label><input type="search" class="form-control form-control-sm" placeholder="" aria-controls="example1"></label>
+                                </div>
+
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
@@ -47,8 +52,8 @@ $dados = $resultDados->selecionaDados('SELECT * FROM produtos');
                                             <th>Tipo</th>
                                             <th>Valor</th>
                                             <th><a href="?pg=inserirItem" class="btn btn-warning"> 
-                                                        <span class="fa fa-plus"></span> <strong> Criar produto</strong>
-                                                    </a> </th>
+                                                    <span class="fa fa-plus"></span> <strong> Criar produto</strong>
+                                                </a> </th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -81,7 +86,7 @@ $dados = $resultDados->selecionaDados('SELECT * FROM produtos');
                                         ?>
 
 
-                                            
+
 
                                     </tbody>
                                     <tfoot>
