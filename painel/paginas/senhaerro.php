@@ -1,5 +1,5 @@
 
-<body id="senhaerro">
+<div id="senhaerro">
     <div  class="container">
         <div class="row">
             <div class="col">
@@ -15,4 +15,4 @@
         <br />
 
     </div>
-</body>
+</div>

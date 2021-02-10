@@ -10,6 +10,14 @@ if ($pg) {
 
 
     switch ($_GET['pg']) {
+
+        case 'inicial':
+            include_once 'site/paginas/include/header.php';
+            include_once 'site/paginas/include/navegacao.php';
+            include_once 'site/paginas/inicio.php';
+            include_once 'site/paginas/include/footer.php';
+            break;
+
         case 'login':
             include_once 'site/paginas/include/header.php';
             include_once 'site/paginas/include/navegacao.php';
@@ -18,20 +26,14 @@ if ($pg) {
 
             break;
 
-        case 'inicial':
-            include_once 'site/paginas/include/header.php';
-            include_once 'site/paginas/include/navegacao.php';
-            include_once 'site/paginas/inicio.php';
-            include_once 'site/paginas/include/footer.php';
-            break;
-        
+
         case 'contatosite':
             include_once 'site/paginas/include/header.php';
             include_once 'site/paginas/include/navegacao.php';
             include_once 'site/paginas/contato.php';
             include_once 'site/paginas/include/footer.php';
             break;
-        
+
         case 'sobre':
             include_once 'site/paginas/include/header.php';
             include_once 'site/paginas/include/navegacao.php';
@@ -45,9 +47,26 @@ if ($pg) {
             include_once 'site/paginas/produtos.php';
             include_once 'site/paginas/includes/footer.php';
             break;
-        
+
+        case 'verificarlogin':
+            if (verificarlogin()) {
+                include_once 'painel/paginas/includes/header.php';
+                include_once 'painel/paginas/includes/menus.php';
+                include_once 'painel/paginas/dashboard.php';
+                include_once 'painel/paginas/includes/footer.php';
+            } else {
+                include_once 'site/paginas/includes/header.php';
+                include_once 'site/paginas/includes/menus.php';
+                include_once 'painel/paginas/senhaerro.php';
+                include_once 'site/paginas/includes/footer.php';
+            }
+            break;
+
+
+
         case 'produtos':
             include_once 'painel/paginas/includes/header.php';
+
             include_once 'painel/paginas/includes/menus.php';
             include_once 'painel/paginas/produtos.php';
             include_once 'painel/paginas/includes/footer.php';
@@ -324,16 +343,7 @@ if ($pg) {
             break;
 
 
-        case 'verificarlogin':
-            if (verificarlogin()) {
-                include_once 'painel/paginas/includes/header.php';
-                include_once 'painel/paginas/includes/menus.php';
-                include_once 'painel/paginas/dashboard.php';
-                include_once 'painel/paginas/includes/footer.php';
-            } else {
-                include_once 'painel/paginas/senhaerro.php';
-            }
-            break;
+
 
         default:
             include_once 'painel/paginas/includes/header.php';

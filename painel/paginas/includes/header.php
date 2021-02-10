@@ -30,8 +30,7 @@
         <link rel="stylesheet" href="painel/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
         <link rel="stylesheet" href="painel/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
         
-        <!--css da pagina de erro de senha ou usuáriio-->
-        <link rel="stylesheet" href="painel/dist/css/senhaerro.css">
+
     </head>
 
 
