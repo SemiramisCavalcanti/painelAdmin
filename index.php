@@ -55,10 +55,10 @@ if ($pg) {
                 include_once 'painel/paginas/dashboard.php';
                 include_once 'painel/paginas/includes/footer.php';
             } else {
-                include_once 'site/paginas/includes/header.php';
-                include_once 'site/paginas/includes/menus.php';
+                include_once 'site/paginas/include/header.php';
+                include_once 'site/paginas/include/navegacao.php';
                 include_once 'painel/paginas/senhaerro.php';
-                include_once 'site/paginas/includes/footer.php';
+                include_once 'site/paginas/include/footer.php';
             }
             break;
 

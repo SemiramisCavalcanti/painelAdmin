@@ -66,10 +66,6 @@
                                         <a href="forgot-password.html">
                                             Esqueci a minha senha</a>
                                     </p>
-                                    <p class="mb-0">
-                                        <a href="register.html" class="text-center">
-                                            Registre uma nova assinatura</a>
-                                    </p>
                                 </div>
                                 <!-- /.card-body -->
                             </div>
@@ -84,7 +80,8 @@
                     <div>
                         <i class="fas fa-user-check bg-blue"></i>
                         <div class="timeline-item">
-                            <h3 class="timeline-header"><a href="#">Cadastro</a> ...</h3>
+                            <h3 class="timeline-header"><a href="register.html">
+                                            Registre uma nova assinatura</a> ...</h3>
 
                             <div class="timeline-body">
                                 <form action="?pg=inserirContato" method="POST">
