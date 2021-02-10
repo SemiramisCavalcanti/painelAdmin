@@ -26,7 +26,6 @@ if ($pg) {
 
             break;
 
-
         case 'contatosite':
             include_once 'site/paginas/include/header.php';
             include_once 'site/paginas/include/navegacao.php';
@@ -61,8 +60,6 @@ if ($pg) {
                 include_once 'site/paginas/include/footer.php';
             }
             break;
-
-
 
         case 'produtos':
             include_once 'painel/paginas/includes/header.php';
@@ -173,8 +170,6 @@ if ($pg) {
             }
             include_once 'painel/paginas/includes/footer.php';
             break;
-
-
 
         case 'servicos':
             $resultDados = new conexao;
@@ -287,9 +282,6 @@ if ($pg) {
             include_once 'painel/paginas/includes/footer.php';
             break;
 
-
-
-
         case 'contato':
             $resultDados = new conexao;
             $dados = $resultDados->selecionaDados('SELECT *  FROM contato');
@@ -309,7 +301,6 @@ if ($pg) {
             include_once 'painel/paginas/clientes.php';
             include_once 'painel/paginas/includes/footer.php';
             break;
-
 //        case 'editarClientes':
 //            break;
         case 'editarCliente':
@@ -378,15 +369,12 @@ if ($pg) {
             header('Location: ?pg=contato');
             break;
 
-
-
         case 'dashboard':
             include_once 'painel/paginas/includes/header.php';
             include_once 'painel/paginas/includes/menus.php';
             include_once 'painel/paginas/dashboard.php';
             include_once 'painel/paginas/includes/footer.php';
             break;
-
 
         default:
             include_once 'painel/paginas/includes/header.php';
